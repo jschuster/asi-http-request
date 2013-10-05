@@ -279,6 +279,7 @@ static NSMutableArray *requestsUsingXMLParser = nil;
 		[externalResourceRequest setDelegate:self];
 		[externalResourceRequest setUploadProgressDelegate:self];
 		[externalResourceRequest setDownloadProgressDelegate:self];
+		[externalResourceRequest setValidatesSecureCertificate:[self validatesSecureCertificate]];
 		if ([self downloadDestinationPath]) {
 			[externalResourceRequest setDownloadDestinationPath:[self cachePathForRequest:externalResourceRequest]];
 		}
